@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RegressionSuite" parallel="classes" thread-count="3">
+
+<!--    &lt;!&ndash; Global Parameter &ndash;&gt;-->
+<!--    <parameter name="browser" value="Chrome" />-->
+
+<!--    &lt;!&ndash; Listener for Custom Reporting &ndash;&gt;-->
+<!--    <listeners>-->
+<!--        <listener class-name="com.example.listeners.ExtentReportListener" />-->
+<!--    </listeners>-->
+
+    <!-- Test Block 1: User Authentication -->
+    <test name="AuthenticationTests">
+        <classes>
+            <class name="org.example.test.AuthenticationTest" />
+            <class name="org.example.Hello" />
+        </classes>
+    </test>
+
+    <!-- Test Block 2: Functional Scope Filtering -->
+<!--    <test name="DashboardTests">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="smoke" />-->
+<!--                <exclude name="broken" />-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="com.example.tests.DashboardTest">-->
+<!--                <methods>-->
+<!--                    <include name="verifyWidgets" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
